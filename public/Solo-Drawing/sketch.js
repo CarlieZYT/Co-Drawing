@@ -75,16 +75,8 @@ let sketch = function(p) {
     /************ canvas ************/
     let cnvContainer = document.getElementById('cnvHolder');
 
-    if (p.windowWidth-182 >= p.windowHeight) {
-      h = p.windowHeight;
-      w = h;
-    } else if (p.windowWidth>= p.windowHeight) {
-      h = p.windowHeight - 182;
-      w = h;
-    } else{
-      w = p.windowWidth;
-      h = w;
-    }
+    w = 600;
+    h = 600;
     scl = w/768;
 
     let cnv = p.createCanvas(w, h);

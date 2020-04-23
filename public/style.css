@@ -11,6 +11,10 @@ body {
     color: white;
     font-family: sans-serif;
 }
+body#solo-mode{
+	width: 600px;
+	height: 800px;
+}
 
 button{
 	background-color: #fff;
@@ -219,6 +223,17 @@ p {
 		float: left;
 		box-sizing: border-box;
 	}
+}
+
+#solo-mode > #btnHolder{
+	width: 100%;
+}
+#solo-mode > #cnvHolder{
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	top: 200px;
+	left: 0;
 }
 
 
