@@ -76,7 +76,7 @@ let sketch = function(p) {
     let cnvContainer = document.getElementById('cnvHolder');
 
     w = 580;
-    h = 600;
+    h = 580;
     scl = w/768;
 
     let cnv = p.createCanvas(w, h);
