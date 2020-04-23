@@ -75,7 +75,7 @@ let sketch = function(p) {
     /************ canvas ************/
     let cnvContainer = document.getElementById('cnvHolder');
 
-    w = 600;
+    w = 580;
     h = 600;
     scl = w/768;
 
