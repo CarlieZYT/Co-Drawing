@@ -73,19 +73,18 @@ function startSketch(){
       // Only desktop can save
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
       if (/iPad|iPhone|iPod|Android|Windows Phone/.test(userAgent) && !window.MSStream) {
-        infoBtn = p.createButton('About');
-        infoBtn.parent(btnContainer);
-        infoBtn.mousePressed(showInfo);
+        submitBtn = p.createButton('Submit');
+        submitBtn.parent(btnContainer);
+        submitBtn.mousePressed(showSubmit);
 
       } else{
         submitBtn = p.createButton('Save');
         submitBtn.parent(btnContainer);
         submitBtn.mousePressed(saveImg);
-
-        infoBtn = p.createButton('About');
-        infoBtn.parent(btnContainer);
-        infoBtn.mousePressed(showInfo);
       }
+      infoBtn = p.createButton('About');
+      infoBtn.parent(btnContainer);
+      infoBtn.mousePressed(showInfo);
 
 
       /************ canvas ************/

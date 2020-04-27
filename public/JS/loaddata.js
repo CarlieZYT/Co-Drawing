@@ -31,7 +31,7 @@ $(function () {
 			$('#infoURL a:first-child').attr("href", artData['infoURL']);
 
 		}).fail( function(d, textStatus, error) {
-			$('body').html('Loading');
+			$('body').html('Sorry, the data cannot be loaded at this time');
 			console.error("getJSON failed, status: " + textStatus + ", error: "+error);
 		});
 	}

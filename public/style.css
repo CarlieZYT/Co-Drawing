@@ -16,7 +16,7 @@ body#solo-mode{
 	height: 800px;
 }
 
-button{
+button, a.button{
 	background-color: #fff;
 	border: none;
 	color: black;
@@ -26,6 +26,12 @@ button{
 	font-size: 16px;
 	text-decoration: none;
 }
+a.dark{
+	background-color: black;
+	color: white;
+	padding: 10px 20px;
+}
+
 h1{
 	text-transform: uppercase;
 }
@@ -42,7 +48,7 @@ p {
 }
 
 #credits{
-	position: fixed;/* Hidden by default */
+	position: fixed;
 	width: 100%; /* Full width (cover the whole page) */
 	height: 100%; /* Full height (cover the whole page) */
 	top: 0;
@@ -53,6 +59,7 @@ p {
 	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 	display: none;
 }
+
 
 .credits-content{
 	margin: 0;
@@ -92,7 +99,7 @@ p {
 	width: auto;
 	height: auto;
 }
-.artInfo a{
+a{
 	color: #D2691E;
 	text-decoration: underline;
 	cursor: pointer;
@@ -102,6 +109,61 @@ p {
 	width: 300px;
 	height: auto;
 	margin-top: 1.2vh;
+}
+
+#submitBox{
+	position: fixed;
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+	display: none;
+}
+
+#desktop-box, #mobile-box{
+	margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 400px;
+	height: 400px;
+	padding: 20px;
+	background: linear-gradient(to right bottom,burlywood, darkkhaki);; /* Black background with opacity */
+	color: black;
+	z-index: 2; 
+	display: none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#submitBox div.content{
+	width: 100%;
+	height: 100%;
+	background: white;
+}
+
+#submitBox h2, #submitBox p{
+	margin: 0;
+	padding: 30px;
+	color: black;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  margin-right: 5px;
+  font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media only screen 
@@ -123,6 +185,7 @@ p {
 		top: 50%;
 		width: 90%;
 	}
+
 }
 
 @media only screen 
@@ -145,6 +208,21 @@ p {
 	.logo-container img{
 		width: 600px;
 		height: auto;
+	}
+
+	#desktop-box, #mobile-box{
+		width: 600px;
+		height: 600px;
+		padding: 40px
+	}
+
+	.close {
+	  margin-right: 5px;
+	  font-size: 40pt;
+	}
+
+	#submitBox h2{
+		padding-top: 60px;
 	}
 }
 
@@ -207,7 +285,7 @@ p {
 		width: 100%;
 	}
 
-	button{
+	button, a.button{
 		padding: 20px;
 		margin:15px;
 		width: 200px;
