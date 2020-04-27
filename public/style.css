@@ -168,7 +168,6 @@ a{
 
 @media only screen 
   and (max-device-width: 1023px) 
-  and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
 	h1{
 		font-size: 16pt;
@@ -301,6 +300,18 @@ a{
 		float: left;
 		box-sizing: border-box;
 	}
+}
+
+@media only screen 
+  and (max-device-width: 1023px) 
+  and (orientation: landscape) { 
+	.resetBtn {
+		margin-top: 10px;
+	}
+	button {
+		margin: 6px;
+	}
+
 }
 
 #solo-mode > #btnHolder{
