@@ -226,13 +226,13 @@ a{
 @media screen and (max-width: 1023px) and (orientation: landscape), 
   screen and (max-width: 767px) { 
 	h1{
-		font-size: 1em;
+		font-size: 16px;
 	}
 	h2{
-		font-size: 1em;
+		font-size: 16px;
 	}
 	p{
-		font-size: .9em;
+		font-size: 14px;
 		font-weight: 400;
 	}
 
@@ -285,7 +285,7 @@ a{
 		padding-top: 20px;
 	}
 	#submitBox p.caution{
-		font-size: .7em;
+		font-size: 11px;
 		text-align: left;
 		padding: 20px;
 	}
