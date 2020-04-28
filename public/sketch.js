@@ -43,7 +43,8 @@ function startSketch(){
 
     p.setup = function() {
       /************ user interface ************/
-      let btnContainer = document.getElementById('btnHolder');
+      let colorBtns = document.getElementById('colorBtns');
+      let functionBtns = document.getElementById('functionBtns');
 
       // colors
       c = colors[colors.length-2];
@@ -51,7 +52,7 @@ function startSketch(){
       for( let i = 0; i < colors.length; i++) {
         colorBtn[i] = p.createButton('');
         // colorBtn[i].position(15, 160 + 80*i);
-        colorBtn[i].parent(btnContainer);
+        colorBtn[i].parent(colorBtns);
         colorBtn[i].class('colorBtn');
         colorBtn[i].style('background-color', colors[i]);
         colorBtn[i].mousePressed(function(){
@@ -67,23 +68,23 @@ function startSketch(){
       // buttons
       resetBtn = p.createButton('Clear');
       resetBtn.class('resetBtn');
-      resetBtn.parent(btnContainer);
+      resetBtn.parent(functionBtns);
       resetBtn.mousePressed(resetCanvas);
 
       // Only desktop can save
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
       if (/iPad|iPhone|iPod|Android|Windows Phone/.test(userAgent) && !window.MSStream) {
         submitBtn = p.createButton('Submit');
-        submitBtn.parent(btnContainer);
+        submitBtn.parent(functionBtns);
         submitBtn.mousePressed(showSubmit);
 
       } else{
         submitBtn = p.createButton('Save');
-        submitBtn.parent(btnContainer);
+        submitBtn.parent(functionBtns);
         submitBtn.mousePressed(saveImg);
       }
       infoBtn = p.createButton('About');
-      infoBtn.parent(btnContainer);
+      infoBtn.parent(functionBtns);
       infoBtn.mousePressed(showInfo);
 
 
