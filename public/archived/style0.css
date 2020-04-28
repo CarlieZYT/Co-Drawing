@@ -23,7 +23,7 @@ button, a.button{
 	padding: 8px 10px;
 	margin:8px;
 	width: 80px;
-	font-size: 16px;
+	font-size: 1em;
 	text-decoration: none;
 }
 a.dark{
@@ -43,8 +43,13 @@ p {
 	margin: 0;
 	padding: 1.2vh;
 	color: white;
-	font-size: 15pt;
+	font-size: 1.2em;
 	font-weight: 200;
+}
+
+#submitBox p.caution{
+	font-size: .9em;
+	color: #D2691E;
 }
 
 #credits{
@@ -124,6 +129,12 @@ a{
 	display: none;
 }
 
+#submitBox div.content{
+	width: 100%;
+	height: 100%;
+	background: white;
+}
+
 #desktop-box, #mobile-box{
 	margin: 0;
     position: absolute;
@@ -139,16 +150,15 @@ a{
 	display: none;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#submitBox div.content{
-	width: 100%;
-	height: 100%;
-	background: white;
-}
 
 #submitBox h2, #submitBox p{
 	margin: 0;
 	padding: 30px;
 	color: black;
+}
+
+#mobile-box h2{
+	padding-top: 32px;
 }
 
 /* The Close Button */
@@ -166,71 +176,14 @@ a{
   cursor: pointer;
 }
 
-@media only screen 
-  and (max-device-width: 1023px) 
-  and (orientation: landscape) { 
-	h1{
-		font-size: 16pt;
-	}
-	h2{
-		font-size: 16pt;
-	}
-	p{
-		font-size: 14pt;
-		font-weight: 400;
-	}
-
-	.credits-content{
-		top: 50%;
-		width: 90%;
-	}
-
-}
-
-@media only screen 
-  and (max-device-width: 767px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-	h1{
-		font-size: 36pt;
-	}
-	h2{
-		font-size: 32pt;
-	}
-	p {
-		font-size: 30pt;
-		font-weight: 400;
-	}
-	.credits-content{
-		width: 90%;
-	}
-	.logo-container img{
-		width: 600px;
-		height: auto;
-	}
-
-	#desktop-box, #mobile-box{
-		width: 600px;
-		height: 600px;
-		padding: 40px
-	}
-
-	.close {
-	  margin-right: 5px;
-	  font-size: 40pt;
-	}
-
-	#submitBox h2{
-		padding-top: 60px;
-	}
-}
-
-
 
 #btnHolder{
 	width: 152px;
 	margin: 15px;
     float: left;
+}
+#colorBtns, #functionBtns{
+	float: left;
 }
 #cnvHolder{
     float: left;
@@ -269,50 +222,90 @@ a{
 	border-width: 15px;
 }
 
-@media (orientation:portrait ){
-	#btnHolder{
-		width: 100%;
+
+@media screen and (max-width: 1023px) and (orientation: landscape), 
+  screen and (max-width: 767px) { 
+	h1{
+		font-size: 16px;
 	}
-}
+	h2{
+		font-size: 16px;
+	}
+	p{
+		font-size: 14px;
+		font-weight: 400;
+	}
 
-@media only screen 
-  and (max-device-width: 767px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-
-	#btnHolder{
-		width: 100%;
+	.credits-content{
+		top: 50%;
+		width: 90%;
+	}
+	.logo-container img{
+		width: 200px;
+		height: auto;
 	}
 
 	button, a.button{
-		padding: 20px;
-		margin:15px;
-		width: 200px;
-		font-size: 27pt;
+		padding: 6px;
+		margin:5px;
+		width: 64px;
+		font-size: .75em;
 		text-decoration: none;
 	}
 
-	.redBtn, .blueBtn, .greenBtn, .yellowBtn, .blkBtn, .grayBtn, .colorBtn{
-		border: 4px solid white;
-		border-radius: 50%;
+	#btnHolder{
 		width: 100px;
-		height: 100px;
+		margin: 5px 15px;
+
+	}
+	.redBtn, .blueBtn, .greenBtn, .yellowBtn, .blkBtn, .grayBtn, .colorBtn{
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
 		float: left;
 		box-sizing: border-box;
 	}
-}
-
-@media only screen 
-  and (max-device-width: 1023px) 
-  and (orientation: landscape) { 
-	.resetBtn {
-		margin-top: 10px;
+	.colorBtn.activeColor{
+		border-width: 10px;
 	}
-	button {
-		margin: 6px;
+	.resetBtn{
+		margin-top: 6px;
 	}
 
+	#mobile-box{
+		width: 250px;
+		height: 250px;
+		top: 50%;
+		padding: 15px;
+	}
+	#mobile-box h2, #mobile-box p{
+		padding: 10px;
+		color: black;
+	}
+	#mobile-box h2{
+		padding-top: 20px;
+	}
+	#submitBox p.caution{
+		font-size: 11px;
+		text-align: left;
+		padding: 20px;
+	}
+
 }
+
+
+@media (orientation:portrait ){
+	#btnHolder, #colorBtns, #functionBtns{
+		width: 100%;
+	}
+	#colorBtns{ 
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-left: -15px;
+	}
+}
+
 
 #solo-mode > #btnHolder{
 	width: 100%;
@@ -324,6 +317,4 @@ a{
 	top: 200px;
 	left: 0;
 }
-
-
 
